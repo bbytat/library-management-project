@@ -1,0 +1,59 @@
+================================  APPLICATION DE GESTION D'UNE BIBLIOTHEQUE EN C  ======================================
+
+
+Utilisation :
+- Livres
+    - Stock
+
+il ya 50 livres dans la base de donnée de la librairie.
+chaque livre est connu par sa cote : le TITRE, l'AUTEUR, le NOMBRE D'EMPRUNT et la LISTE DES EMPRUNTS
+
+Si le livre n’est pas emprunté, il est par défaut emprunté étudiant n° 0 et de date de retour =0
+
+    - La classe livre
+
+Pour lire les fichiers on a utilisé obligatoirement des fonctions récursives a cause du choix de la structure des listes chainées.
+Il ya aussi la méthode rechercher qui recherche un livre dans la base a partir de sa cote.
+Et pour écrire aussi on a suivi la même méthode plus au moins que la lecture.
+La méthode Afficher() (évident)
+
+- Etudiant
+    - Inscrits
+
+Le fichier des inscrits contient 3 étudiants : ce sont les membres de notre groupe
+Un qui a emprunté un livre et qui a une pénalité 16. Les deux autres ont emprunté un seul livre et pas de pénalité.
+
+    - La classe élève
+
+On a utilisé la même procédure que le stock du livre pour lire et écrire les données dans le fichier des inscrits.
+De plus il ya la méthode ajouter utile pour l’opération d’inscription et la méthode supprimer() utile pour l’opération d’inscription , 
+les deux méthodes sont réalisées par des fonctions récursives.
+La méthode rechercher() est comme dans la classe .
+
+- La file d’attente
+    - Fichier file.txt*
+
+Ce fichier contient les données d’initialisation qui contient les étudiants 1 et 2 qui sont déjà inscrits et deux autres étudiants 7 et 4.
+   - La class file
+
+Il contient le constructeur destructeur et enfiler défiler vider …*
+Rien a expliquer parce qu’il utilise les mêmes propriétés que d’autres classes (des fonctions récursives et des listes chainées).
+
+- Date
+   - Le fichier date.txt
+
+Le fichier date.txt sert tout simplement d’enregistrer la date d’aujourd’hui lors de l’enregistrement générale de la simulation pour la 
+prochaine utilisation du programme.(un seul mot «  jj/mm/aaaa »).
+
+    - la class date
+
+C’est la où on a vraiment trouvé des difficultés en terme de conversion string<->int et on pour le traitement de la pinalité et le 
+calcule de la date de retour d’un livre emprunté.
+Pour remédier à ces problèmes on est obliger d’utiliser des bibliothèque C comme stdlib qui sont aussi des bibliothèque c++ !!
+Cette classe contient la méthode deltadate(date) qui permet le calcule de la différence entre deux dates de type char* afin de calculer la différence entre la date d’aujourd’hui et la date de retour pour traité la pénalité.
+La méthode retour() qui renvoie une chaine de caractère sous format d’une date . elle appeler lors de l’emprunt d’un livre ^pour calculer la date de retour .
+Il ya aussi la méthode valider() qui vérifie le format de la date d’aujourd’hui e=insérer par l’utilisateur.
+Les attributs jours, moi et année sont des entier extrait a partir de l’attribut dte qui est une date comme char*.
+
+- Le fichier structures.h
+Il contient juste les définitions des structures pour les listes chainées.

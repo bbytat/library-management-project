@@ -1,0 +1,1 @@
+void obtenir(char *pt);
