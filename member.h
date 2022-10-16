@@ -19,7 +19,37 @@ void get(char *pt)
 
 // on affiche les informations de l'adherent
 
-void show(Member member)
+void show(struct Member member)
 {
-    printf("last name : ")
+    printf("last name :    %c\n", member.LastName);
+    printf("first name :    %c\n", member.FirstName);
+    printf("number of loans :   %d\n", member.nbLoans);
+    printf("registration date :     %d/%d/%d\n", member.date.year, member.date.month, member.date.day);
+}
+
+// on demande de recuperer les infos de l'usager
+void ask(struct Member *member)
+{
+    Member perso;
+    printf("enter informations about the member : \n");
+    printf(" - index :   ");
+    scanf("%d", &(perso.index));
+    viderBuffer();
+    printf(" - last name :   ");
+    scanf("%s", perso.LastName);
+    viderBuffer();
+    printf(" - first name :   ");
+    scanf("%s", perso.FirstName);
+    viderBuffer();
+    printf(" - number of loans :   ");
+    scanf("%d", &(perso.nbLoans));
+    printf(" - subscritpion date :      ");
+    printf("\t - day : ");
+    scanf("%d", &perso.date.day);
+    printf("\t - month : ");
+    scanf("%d", &perso.date.month);
+    printf("\t - year : ");
+    scanf("%d", &perso.date.year);
+
+    *member = perso
 }

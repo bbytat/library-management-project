@@ -3,11 +3,11 @@
 #include <ctype.h>
 #include <string.h>
 #include "prototypes.h"
-#include "livres.h"
+#include "book.h"
 #include "structure.h"
+#include "member.h"
 
-int main(int argc, char** argv)
+int main
 {
     
-  return 0;
 }

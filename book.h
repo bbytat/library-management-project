@@ -23,11 +23,29 @@ void show(Book book)
 {
     printf("title : %s\n", book.title);
     printf("author : %s\n", book.author);
-    printf("number of loans done = %s"; book.available;
+    printf("number of loans done = %s", book.available;
     printf("list of loans done : %s\n", book.stock);
 
 }
 
-//on affiche les informations sur l'adherent 
+//on affiche les informations sur l'adherent par rapport au livre choisi
+void ask(Book *mem)
+{
+    Book member;
+    printf("enter informations about the book : \n");
+    printf(" - index :   ");
+    scanf("%d", &(perso.index));
+    viderBuffer();
+    printf(" - title :   ");
+    scanf("%s", perso.title);
+    viderBuffer();
+    printf(" - author :   ");
+    scanf("%s", perso.author);
+    viderBuffer();
+    printf(" - total stock :   ");
+    scanf("%d", &(perso.stock));
+
+    *member = perso
+}
 
 
