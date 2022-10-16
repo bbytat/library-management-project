@@ -1,59 +1,58 @@
-================================  APPLICATION DE GESTION D'UNE BIBLIOTHEQUE EN C  ======================================
+=============================== LIBRARY MANAGEMENT APPLICATION IN C ======================================
 
 
-Utilisation :
-- Livres
-    - Stock
+Use :
+-Books
+    - Store
 
-il ya 50 livres dans la base de donnée de la librairie.
-chaque livre est connu par sa cote : le TITRE, l'AUTEUR, le NOMBRE D'EMPRUNT et la LISTE DES EMPRUNTS
+there are 50 books in the library database.
+each book is known by its call number: the TITLE, the AUTHOR, the NUMBER OF LOANS and the LIST OF LOANS
 
-Si le livre n’est pas emprunté, il est par défaut emprunté étudiant n° 0 et de date de retour =0
+If the book is not borrowed, it is by default borrowed from student n° 0 and return date =0
 
-    - La classe livre
+    - The class delivers:
 
-Pour lire les fichiers on a utilisé obligatoirement des fonctions récursives a cause du choix de la structure des listes chainées.
-Il ya aussi la méthode rechercher qui recherche un livre dans la base a partir de sa cote.
-Et pour écrire aussi on a suivi la même méthode plus au moins que la lecture.
-La méthode Afficher() (évident)
+use the method which searches for a book in the database from its call number.
+to also write on follows the same method more or less as reading.
+The Display() method
 
-- Etudiant
-    - Inscrits
+- Student
+    - Registered
 
-Le fichier des inscrits contient 3 étudiants : ce sont les membres de notre groupe
-Un qui a emprunté un livre et qui a une pénalité 16. Les deux autres ont emprunté un seul livre et pas de pénalité.
+The registrant file contains 10 students: these are the members of our group
+One who borrowed a book and has a 16 franchise. The others borrowed a single book and no franchise.
 
-    - La classe élève
+    - The student class:
+We used the same procedure as the book stock to read and write the data in the registrant file.
+In addition there is the add method useful for the registration operation and the delete() method useful for the registration operation,
+both methods are realized by recursive functions.
+The search() method is like in the .
 
-On a utilisé la même procédure que le stock du livre pour lire et écrire les données dans le fichier des inscrits.
-De plus il ya la méthode ajouter utile pour l’opération d’inscription et la méthode supprimer() utile pour l’opération d’inscription , 
-les deux méthodes sont réalisées par des fonctions récursives.
-La méthode rechercher() est comme dans la classe .
+- The waiting line :
+    - file.txt file*
 
-- La file d’attente
-    - Fichier file.txt*
+This file contains initialization data which contains students 1 and 2 who are already enrolled and other students.
 
-Ce fichier contient les données d’initialisation qui contient les étudiants 1 et 2 qui sont déjà inscrits et deux autres étudiants 7 et 4.
-   - La class file
+   - The class file:
 
-Il contient le constructeur destructeur et enfiler défiler vider …*
-Rien a expliquer parce qu’il utilise les mêmes propriétés que d’autres classes (des fonctions récursives et des listes chainées).
+It contains the destructor constructor and thread scroll void...*
+Nothing to explain because it uses the same properties as other classes (recursive functions and linked lists).
 
 - Date
-   - Le fichier date.txt
+   - The date.txt file
 
-Le fichier date.txt sert tout simplement d’enregistrer la date d’aujourd’hui lors de l’enregistrement générale de la simulation pour la 
-prochaine utilisation du programme.(un seul mot «  jj/mm/aaaa »).
+The date.txt file is simply used to record today's date during the general recording of the simulation for the
+next use of the program. (one word “dd/mm/yyyy”).
 
-    - la class date
+    - the date class:
 
-C’est la où on a vraiment trouvé des difficultés en terme de conversion string<->int et on pour le traitement de la pinalité et le 
-calcule de la date de retour d’un livre emprunté.
-Pour remédier à ces problèmes on est obliger d’utiliser des bibliothèque C comme stdlib qui sont aussi des bibliothèque c++ !!
-Cette classe contient la méthode deltadate(date) qui permet le calcule de la différence entre deux dates de type char* afin de calculer la différence entre la date d’aujourd’hui et la date de retour pour traité la pénalité.
-La méthode retour() qui renvoie une chaine de caractère sous format d’une date . elle appeler lors de l’emprunt d’un livre ^pour calculer la date de retour .
-Il ya aussi la méthode valider() qui vérifie le format de la date d’aujourd’hui e=insérer par l’utilisateur.
-Les attributs jours, moi et année sont des entier extrait a partir de l’attribut dte qui est une date comme char*.
+This is where we really struggled in terms of string<->int and on conversion for pinality processing and
+calculates the return date of a borrowed book.
+This class contains the method deltadate(date) which allows the calculation of the difference between two dates of type char* in order to calculate the difference between today's date and the return date for processing the penalty.
+The return() method which returns a character string in date format. it is called when borrowing a book to calculate the return date.
+There is also the validate() method which checks the format of today's date e=inserted by the user.
+The day, month and year attributes are integers extracted from the attribute which is a date like char*.
 
-- Le fichier structures.h
-Il contient juste les définitions des structures pour les listes chainées.
+- The structures.h file:
+
+It contains the structure definitions for linked lists.
