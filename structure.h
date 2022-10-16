@@ -1,18 +1,18 @@
-typedef struct Livre Livre
-typedef struct Adherent Adherent
+typedef struct Book book
+typedef struct Member member
 
-struct Livre
+struct Book
 {
-    int titre;
-    int auteur;
-    int disponible;
+    int title;
+    int author;
+    int available;
     int stock;
 };
 
-struct Adherent
+struct Member
 {
     int index;
-    char nom;
-    char prenom;
-    int nbEmprunts;
+    char last name;
+    char first name;
+    int nbLoans;
 };

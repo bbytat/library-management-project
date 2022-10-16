@@ -1,16 +1,16 @@
 
 // on cree un menu demandant a l'utilisateur les renseignements pour trouver et obtenir l'adherent dans la liste
 
-void obtenir(char *pt)
+void get(char *pt)
 {
     char c ;
     printf("    - S to search\n");
-    printf("    - A to add a new\n");
-    printf("    - S poiur supprimer un adherent a la liste\n");
+    printf("    - A to add a new memner to the list\n");
+    printf("    - D to delet a member from the list\n");
 
-    while(strchr("CAS", c) == NULL)
+    while(strchr("SAD", c) == NULL)
         {
-            printf("entrez l'action\n\n");
+            printf("what's the action ?\n\n");
             scanf("%c", &c);
             c = toupper(getchar());
         }
@@ -19,7 +19,7 @@ void obtenir(char *pt)
 
 // on affiche les informations de l'adherent
 
-void afficher(Adherent adherent)
+void show(Member member)
 {
-    printf("nom : ")
+    printf("last name : ")
 }

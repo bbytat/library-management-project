@@ -1,3 +1,3 @@
-void obtenir(char *pt);
-void afficher(Adherent);
+void get(char *pt);
+void show(member);
 void 
