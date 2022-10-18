@@ -4,11 +4,12 @@
 void get(char *pt)
 {
     char c ;
-    printf("    - S to search\n");
-    printf("    - A to add a new memner to the list\n");
+    printf("    - S to search a member in the list\n");
+    printf("    - A to add a new member to the list\n");
     printf("    - D to delet a member from the list\n");
+    printf("    - R to return into the main menu");
 
-    while(strchr("SAD", c) == NULL)
+    while(strchr("SADR", c) == NULL)
         {
             printf("what's the action ?\n\n");
             scanf("%c", &c);

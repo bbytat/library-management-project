@@ -7,8 +7,9 @@ void get(char *pt)
     printf("        - S to search in the library C\n");
     printf("        - A to add a new book in the library\n");
     printf("        - D to delete a book from the library\n");
+    printf("        - R to return into the main menu");
     
-    while(strchr("SAD", c) == NULL)
+    while(strchr("SADR", c) == NULL)
         {
             printf("what's the action ?\n\n");
             scanf("%c", &c);
