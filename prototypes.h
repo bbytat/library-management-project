@@ -1,10 +1,15 @@
+#ifndef PROTOTYPES_H
+#define PROTOTYPES_H
+
 void get(char *pt);
 void viderBuffer();
 
     // MEMBER PROTOTYPE :
-void show(member);
+void show(struct Member);
 void ask(member *ptr);
 
     //BOOK PROTOTYPE :
-void show(Book);
-void ask(Book, *ptr);
+void show(struct Book);
+void ask(book, *ptr);
+
+#endif

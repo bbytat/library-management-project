@@ -3,8 +3,7 @@
 
 Use :
 -Books
-    - Store
-
+ 
 there are 50 books in the library database.
 each book is known by its call number: the TITLE, the AUTHOR, the NUMBER OF LOANS and the LIST OF LOANS
 
@@ -16,13 +15,13 @@ use the method which searches for a book in the database from its call number.
 to also write on follows the same method more or less as reading.
 The Display() method
 
-- Student
+- member
     - Registered
 
 The registrant file contains 10 students: these are the members of our group
 One who borrowed a book and has a 16 franchise. The others borrowed a single book and no franchise.
 
-    - The student class:
+    - The member class :
 We used the same procedure as the book stock to read and write the data in the registrant file.
 In addition there is the add method useful for the registration operation and the delete() method useful for the registration operation,
 both methods are realized by recursive functions.

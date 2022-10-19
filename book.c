@@ -1,7 +1,8 @@
+#include "header.h"
 
 // on cree un menu demandant a l'utilisateur les renseignements pour trouver et obtenir le livre dans la bibliotheque
 
-void get(char *pt)
+void get()
 {
     char c ;
     printf("        - S to search in the library C\n");
@@ -15,38 +16,45 @@ void get(char *pt)
             scanf("%c", &c);
             c = toupper(getchar());
         }
-            *pt = c;
+ 
 
 }
 
 // on affiche les informations du livre choisi
-void show(Book book)
+void show(t_all all)
 {
-    printf("title : %s\n", book.title);
-    printf("author : %s\n", book.author);
-    printf("number of loans done = %s", book.available;
-    printf("list of loans done : %s\n", book.stock);
+    printf("title : %s\n", all.book.title);
+    printf("author : %s\n", all.book.author);
+    printf("number of loans done = %s", all.book.available;
+    printf("list of loans done : %s\n", all/book.stock);
 
 }
 
 //on affiche les informations sur l'adherent par rapport au livre choisi
-void ask(Book *mem)
+void ask(t_all all)
 {
     Book member;
     printf("enter informations about the book : \n");
     printf(" - index :   ");
-    scanf("%d", &(perso.index));
+    scanf("%d", &(all.perso.index));
     viderBuffer();
     printf(" - title :   ");
-    scanf("%s", perso.title);
+    scanf("%s", all.perso.title);
     viderBuffer();
     printf(" - author :   ");
-    scanf("%s", perso.author);
+    scanf("%s", all.perso.author);
     viderBuffer();
     printf(" - total stock :   ");
-    scanf("%d", &(perso.stock));
+    scanf("%d", &(all.perso.stock));
 
     *member = perso
+}
+
+void manageBook(t_all all)
+{
+    get();
+    show(all);
+    ask(all);
 }
 
 

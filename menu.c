@@ -1,45 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
-#include "prototypes.h"
-#include "book.h"
-#include "structure.h"
-#include "member.h"
+#include "header.h"
 
-char n;
-char choice;
 
-void menu()
+int choiceMenu = 0;
+
+menu()
 {
+    t_all all:
+
     printf("             **********************************************************\n");
     printf("             ****** WELCOME TO OUR LIBRARY MANAGEMENT APPLICATION *****\n");
     printf("             **********************************************************\n\n");
-    prinff("                        - A to get out of the application\n");
-    printf("                       - B to see features for all members\n");
-    printf("                        - C to see features for all books\n");
-    printf("                       - D to see all features for all loans\n");
+    prinff("                        - 1 to get out of the application\n");
+    printf("                       - 2 to see features for all members\n");
+    printf("                        - 3 to see features for all books\n");
     printf("your choice ?");
-    do 
+    
+    scanf("%d", &choiceMenu);
+
+    switch(choiceMenu)
     {
-        n = toupper(getchar());
-    }
-    while(strchr("ABCD", n) == NULL);
+        case 1 :
+        return;
 
-    switch(n)
-    {
-        case 'A' :
+        case 2 :
+        manageMember(all);
         break;
 
-        case 'B' :
+        case 3 :
+        manageBook(all);
         break;
 
-        case 'C' :
-        break;
 
-        case 'D'
+        default :
+        printf("please, select a correct number.\n");
         break;
         
     }
+
+    return 0;
 
 }
