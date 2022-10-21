@@ -3,7 +3,7 @@
 // on cree un menu demandant a l'utilisateur les renseignements pour trouver et obtenir l'adherent dans la liste
 
 
-void get()
+void getMember()
 {
     char c;
     printf("    - S to search a member in the list\n");
@@ -24,25 +24,24 @@ void get()
 
 void show(t_all all)
 {
-    printf("last name :    %c\n", all.member.LastName);
-    printf("first name :    %c\n", all.member.FirstName);
-    printf("number of loans :   %d\n", all.member.nbLoans);
-    printf("registration date :     %d/%d/%d\n", all.member.date.year, member.date.month, member.date.day);
+    printf("last name :    %c\n", all.Member.FirstName);
+    printf("number of loans :   %d\n", all.Member.nbLoans);
+    printf("registration date :     %d/%d/%d\n", all.Member.date.year, all.Member.date.month, all.Member.date.day);
 }
 
 // on demande de recuperer les infos de l'usager
-void ask(t_all all)
+void askMember(t_all all)
 {
     printf("enter informations about the member : \n");
     printf(" - index :   ");
     scanf("%d", &(all.index));
-    viderBuffer();
+    fflush(stdin);
     printf(" - last name :   ");
     scanf("%s", all.LastName);
-    viderBuffer();
+    fflush(stdin);
     printf(" - first name :   ");
     scanf("%s", all.FirstName);
-    viderBuffer();
+    fflush(stdin);
     printf(" - number of loans :   ");
     scanf("%d", &(all.nbLoans));
     printf(" - subscritpion date :      ");
@@ -57,9 +56,9 @@ void ask(t_all all)
 
 void manageMember(t_all all)
 {
-    get();
+    getMember();
     show(all);
-    ask(all)
+    askMember(all)
 
 };
 

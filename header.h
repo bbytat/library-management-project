@@ -18,7 +18,7 @@ typedef struct s_Book
     char title[100];
     char author[100];
     int available;
-    int stock;
+    int stock[100];
 } t_book;
 
 typedef struct s_Date
@@ -47,17 +47,12 @@ typedef struct s_all
 }t_all;
 
 // PROTOTYPES :
-void get(char *pt);
-void viderBuffer();
+void getMember(char *pt);
+void getBook(char *pt);
 
-    // MEMBER PROTOTYPE :
 void show(t_all all);
-void ask(t_member *ptr);
-
-    //BOOK PROTOTYPE :
-void show(t_all all);
-void ask(t_book *ptr);
-
+void askMember(t_member *ptr);
+void askBook(t_book *ptr);
 
 void menu();
 

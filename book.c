@@ -25,25 +25,25 @@ void show(t_all all)
 {
     printf("title : %s\n", all.book.title);
     printf("author : %s\n", all.book.author);
-    printf("number of loans done = %s", all.book.available;
-    printf("list of loans done : %s\n", all/book.stock);
+    printf("number of loans done : %s", all.book.available);
+    printf("list of loans done : %s\n", all.book.stock);
 
 }
 
 //on affiche les informations sur l'adherent par rapport au livre choisi
-void ask(t_all all)
+void askBook(t_all all)
 {
     Book member;
     printf("enter informations about the book : \n");
     printf(" - index :   ");
     scanf("%d", &(all.index));
-    viderBuffer();
+    fflush(stdin);
     printf(" - title :   ");
     scanf("%s", all.title);
-    viderBuffer();
+    fflush(stdin);
     printf(" - author :   ");
     scanf("%s", all.author);
-    viderBuffer();
+    fflush(stdin);
     printf(" - total stock :   ");
     scanf("%d", &(all.stock));
 
@@ -51,9 +51,9 @@ void ask(t_all all)
 
 void manageBook(t_all all)
 {
-    get();
+    getBook();
     show(all);
-    ask(all);
+    askBook(all);
 }
 
 
