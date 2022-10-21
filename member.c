@@ -33,28 +33,26 @@ void show(t_all all)
 // on demande de recuperer les infos de l'usager
 void ask(t_all all)
 {
-    Member perso;
     printf("enter informations about the member : \n");
     printf(" - index :   ");
-    scanf("%d", &(all.perso.index));
+    scanf("%d", &(all.index));
     viderBuffer();
     printf(" - last name :   ");
-    scanf("%s", all.perso.LastName);
+    scanf("%s", all.LastName);
     viderBuffer();
     printf(" - first name :   ");
-    scanf("%s", all.perso.FirstName);
+    scanf("%s", all.FirstName);
     viderBuffer();
     printf(" - number of loans :   ");
-    scanf("%d", &(all.perso.nbLoans));
+    scanf("%d", &(all.nbLoans));
     printf(" - subscritpion date :      ");
     printf("\t - day : ");
-    scanf("%d", &all.perso.date.day);
+    scanf("%d", &all.date.day);
     printf("\t - month : ");
-    scanf("%d", &all.perso.date.month);
+    scanf("%d", &all.date.month);
     printf("\t - year : ");
-    scanf("%d", &all.perso.date.year);
+    scanf("%d", &all.date.year);
 
-    *member = perso
 }
 
 void manageMember(t_all all)

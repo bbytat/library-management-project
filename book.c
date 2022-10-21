@@ -36,18 +36,17 @@ void ask(t_all all)
     Book member;
     printf("enter informations about the book : \n");
     printf(" - index :   ");
-    scanf("%d", &(all.perso.index));
+    scanf("%d", &(all.index));
     viderBuffer();
     printf(" - title :   ");
-    scanf("%s", all.perso.title);
+    scanf("%s", all.title);
     viderBuffer();
     printf(" - author :   ");
-    scanf("%s", all.perso.author);
+    scanf("%s", all.author);
     viderBuffer();
     printf(" - total stock :   ");
-    scanf("%d", &(all.perso.stock));
+    scanf("%d", &(all.stock));
 
-    *member = perso
 }
 
 void manageBook(t_all all)
