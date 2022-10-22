@@ -1,14 +1,14 @@
-// LIST MEMBER :
+// LIST MEMBER :        NB OF LOANS :   REGISTRATION DATE :
 
-- James Smith       
-- Maria Rodriguez
-- Robert Johnson
-- Susan Garcia 
-- Margaret Martinez
-- Kevin Hu
-- Jean Dupont
-- Charles Petit 
-- Stephanie Wang
-- Wendy Zhang 
-- Lucia Santos 
-- Aymeric Silva 
+- James Smith           5               28.02.2018
+- Maria Rodriguez       2               13.04.2020
+- Robert Johnson        1               07.05.2017
+- Susan Garcia          8               26.11.2021
+- Margaret Martinez     5               17.09.2020
+- Kevin Hu              3               21.04.2021
+- Jean Dupont           1
+- Charles Petit         7
+- Stephanie Wang        10
+- Wendy Zhang           4
+- Lucia Santos          2
+- Aymeric Silva         9
