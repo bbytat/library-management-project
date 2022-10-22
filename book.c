@@ -33,7 +33,7 @@ void show(t_all all)
 //on affiche les informations sur l'adherent par rapport au livre choisi
 void askBook(t_all all)
 {
-    t_all member;
+    t_all Member;
     printf("enter informations about the book : \n");
     printf(" - index :   ");
     scanf("%d", &(all.index));

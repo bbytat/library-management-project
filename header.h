@@ -19,14 +19,15 @@ typedef struct s_Book
     char author[100];
     int available;
     int stock[100];
-} t_book;
+    
+} t_Book;
 
 typedef struct s_Date
 {
     int year;
     int month;
     int day;
-}t_date;
+}t_Date;
 
 typedef struct s_Member
 {
@@ -34,15 +35,15 @@ typedef struct s_Member
     char LastName[50];
     char FirstName[50];
     int nbLoans;
-    t_date date;
+    t_Date Date;
    
-}t_member;
+}t_Member;
 
 typedef struct s_all
 {
-    t_book Book;
-    t_date Date;
-    t_member      Member;
+    t_Book Book;
+    t_Date Date;
+    t_Member Member;
 
 }t_all;
 
@@ -51,8 +52,8 @@ void getMember(char *pt);
 void getBook(char *pt);
 
 void show(t_all all);
-void askMember(t_member *ptr);
-void askBook(t_book *ptr);
+void askMember(t_Member *ptr);
+void askBook(t_Book *ptr);
 
 void menu();
 

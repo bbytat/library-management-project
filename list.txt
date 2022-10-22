@@ -1,0 +1,14 @@
+// LIST MEMBER :
+
+- James Smith       
+- Maria Rodriguez
+- Robert Johnson
+- Susan Garcia 
+- Margaret Martinez
+- Kevin Hu
+- Jean Dupont
+- Charles Petit 
+- Stephanie Wang
+- Wendy Zhang 
+- Lucia Santos 
+- Aymeric Silva 
