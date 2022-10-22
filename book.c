@@ -23,10 +23,10 @@ void get()
 // on affiche les informations du livre choisi
 void show(t_all all)
 {
-    printf("title : %s\n", all.book.title);
-    printf("author : %s\n", all.book.author);
-    printf("number of loans done : %s", all.book.available);
-    printf("list of loans done : %s\n", all.book.stock);
+    printf("title : %s\n", all.Book.title);
+    printf("author : %s\n", all.Book.author);
+    printf("number of loans done : %s", all.Book.available);
+    printf("list of loans done : %s\n", all.Book.stock);
 
 }
 
@@ -52,8 +52,8 @@ void askBook(t_all all)
 void manageBook(t_all all)
 {
     getBook();
-    show(all);
-    askBook(all);
-}
+    show();
+    askBook();
+};
 
 

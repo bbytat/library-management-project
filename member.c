@@ -57,8 +57,8 @@ void askMember(t_all all)
 void manageMember(t_all all)
 {
     getMember();
-    show(all);
-    askMember(all)
+    show();
+    askMember();
 
 };
 

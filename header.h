@@ -42,7 +42,7 @@ typedef struct s_all
 {
     t_book Book;
     t_date Date;
-    t_member Member;
+    t_member      Member;
 
 }t_all;
 
